@@ -22,11 +22,16 @@
   margin-bottom: 5px;
   font-size: 50px;
 }
+.search-button{
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
 .day-grid{
   display: grid;
   grid-template-columns: repeat(5,1fr);
   width: 500px;
   border: 1px solid black;
+  line-height: .8;
 }
 .weather-grid{
   display: grid;
