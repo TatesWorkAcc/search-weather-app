@@ -1,11 +1,10 @@
-.weatherapp-conatiner{
+.weatherapp-conatiner {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.main-data{
-  
+.main-data {
   width: 500px;
   border: 1px solid black;
   display: flex;
@@ -13,29 +12,29 @@
   justify-content: center;
   align-items: center;
 }
-.main-text{
+.main-text {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-.today{
+.today {
   margin-top: 30px;
   margin-bottom: 5px;
   font-size: 50px;
 }
-.search-button{
+.search-button {
   margin-bottom: 15px;
   margin-top: 10px;
 }
-.day-grid{
+.day-grid {
   display: grid;
-  grid-template-columns: repeat(5,1fr);
+  grid-template-columns: repeat(5, 1fr);
   width: 500px;
   border: 1px solid black;
-  line-height: .8;
+  line-height: 0.8;
 }
-.weather-grid{
+.weather-grid {
   display: grid;
-  grid-template-rows: repeat(5,1fr);
+  grid-template-rows: repeat(5, 1fr);
   border: 1px solid black;
   text-align: center;
 }
