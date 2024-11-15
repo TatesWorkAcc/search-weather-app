@@ -1,0 +1,21 @@
+.weatherapp-conatiner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-data{
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+}
+.day-grid{
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  width: 500px;
+  height: 150px;
+  border: 1px solid black;
+}
+.weather-grid{
+  border: 1px solid black;
+}
