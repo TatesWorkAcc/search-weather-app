@@ -31,9 +31,29 @@ function WeatherApp() {
         console.log(data);
       })
       .catch((error) => console.log(error));
-  }, [city]);
+  }, []);
 
-  function handleWeatherSearch() {}
+  function handleWeatherSearch() {
+    fetch(api)
+      .then((res) => {
+        if (res.ok) {
+          console.log("SUCCESS");
+        } else {
+          console.log("FAILED");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        if (data && data.list) {
+          setCityData(data.list);
+          setTemp((data.list[0].main.temp - 273.15) * (9 / 5) + 32);
+          setCondition(data.list[0].weather[0].description);
+          setHumidity(data.list[0].main.humidity);
+        }
+        console.log(data);
+      })
+      .catch((error) => console.log(error));
+  }
 
   return (
     <div className="weatherapp-conatiner">
