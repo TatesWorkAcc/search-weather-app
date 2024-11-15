@@ -187,12 +187,12 @@ function WeatherApp() {
   return (
     <div className="weatherapp-conatiner">
       <div className="main-data">
-        <h1>Today</h1>
-        <h1>{cityText}</h1>
-        <h1>{temp}°</h1>
-        <h1>{condition}</h1>
-        <h1>{description}</h1>
-        <h1>{humidity}</h1>
+        <h1 className="main-text">Today</h1>
+        <h1 className="main-text">{cityText}</h1>
+        <h1 className="main-text">{temp}°</h1>
+        <h1 className="main-text">{condition}</h1>
+        <h1 className="main-text">{description}</h1>
+        <h1 className="main-text">{humidity} Humidity</h1>
         <input value={city} onChange={(e) => setCity(e.target.value)}></input>
         <button onClick={handleWeatherSearch}>Search</button>
       </div>
@@ -202,35 +202,35 @@ function WeatherApp() {
           <h3>{temp2}°</h3>
           <h3>{condition2}</h3>
           <h3>{description2}</h3>
-          <h3>{humidity2}</h3>
+          <h3>{humidity2} Humidity</h3>
         </div>
         <div className="weather-grid">
           <h3>{day3}</h3>
           <h3>{temp3}°</h3>
           <h3>{condition3}</h3>
           <h3>{description3}</h3>
-          <h3>{humidity3}</h3>
+          <h3>{humidity3} Humidity</h3>
         </div>
         <div className="weather-grid">
           <h3>{day4}</h3>
           <h3>{temp4}°</h3>
           <h3>{condition4}</h3>
           <h3>{description4}</h3>
-          <h3>{humidity4}</h3>
+          <h3>{humidity4} Humidity</h3>
         </div>
         <div className="weather-grid">
           <h3>{day5}</h3>
           <h3>{temp5}°</h3>
           <h3>{condition5}</h3>
           <h3>{description5}</h3>
-          <h3>{humidity5}</h3>
+          <h3>{humidity5} Humidity</h3>
         </div>
         <div className="weather-grid">
           <h3>{day6}</h3>
           <h3>{temp6}°</h3>
           <h3>{condition6}</h3>
           <h3>{description6}</h3>
-          <h3>{humidity6}</h3>
+          <h3>{humidity6} Humidity</h3>
         </div>
       </div>
     </div>

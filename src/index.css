@@ -6,16 +6,26 @@
 }
 .main-data{
   width: 500px;
-  height: 500px;
+  height: 600px;
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-text{
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .day-grid{
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: repeat(5,1fr);
   width: 500px;
-  height: 150px;
   border: 1px solid black;
 }
 .weather-grid{
+  display: grid;
+  grid-template-rows: repeat(5,1fr);
   border: 1px solid black;
+  text-align: center;
 }
