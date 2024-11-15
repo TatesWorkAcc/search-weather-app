@@ -56,7 +56,7 @@ function WeatherApp() {
   const day6 = d6.toLocaleString("en-US", { weekday: "long" });
 
   const apiKey = "cdd4092d218d6552c31cd36150f70f4f";
-  const api = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apikey}`;
+  const api = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
 
   useEffect(() => {
     fetch(api)
