@@ -114,7 +114,7 @@ function WeatherApp() {
           setDescription6(data.list[39].weather[0].description);
           setHumidity6(data.list[39].main.humidity);
 
-          setCity('')
+          setCity("");
         }
         console.log(data);
       })
@@ -176,8 +176,8 @@ function WeatherApp() {
           setCondition6(data.list[39].weather[0].main);
           setDescription6(data.list[39].weather[0].description);
           setHumidity6(data.list[39].main.humidity);
-          
-          setCity('')
+
+          setCity("");
         }
         console.log(data);
       })
