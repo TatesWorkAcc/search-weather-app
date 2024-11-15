@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 function WeatherApp() {
+  // setting the data for the main day with some defaults being New York
   const [city, setCity] = useState("New York");
   const [cityText, setCityText] = useState(city);
   const [temp, setTemp] = useState();
@@ -8,8 +9,7 @@ function WeatherApp() {
   const [description, setDescription] = useState("");
   const [humidity, setHumidity] = useState("");
 
-  //   grid data
-
+  //  setting the data for the 5 day forecast
   const [temp2, setTemp2] = useState();
   const [condition2, setCondition2] = useState("");
   const [description2, setDescription2] = useState("");
@@ -35,6 +35,7 @@ function WeatherApp() {
   const [description6, setDescription6] = useState("");
   const [humidity6, setHumidity6] = useState("");
 
+  // these get what day it is tommorrow
   const d2 = new Date();
   d2.setDate(d2.getDate() + 1);
   const day2 = d2.toLocaleString("en-US", { weekday: "long" });
@@ -58,6 +59,7 @@ function WeatherApp() {
   const apiKey = "cdd4092d218d6552c31cd36150f70f4f";
   const api = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
 
+  //runs on mount to give default data of New York
   useEffect(() => {
     fetch(api)
       .then((res) => {
@@ -70,7 +72,7 @@ function WeatherApp() {
       })
       .then((data) => {
         if (data && data.list) {
-          // main data
+          // main data, goes where the data is located and assigns it to a variable
           setCityText(data.city.name);
           setTemp(Math.floor((data.list[0].main.temp - 273.15) * (9 / 5) + 32));
           setCondition(data.list[0].weather[0].main);
@@ -121,6 +123,7 @@ function WeatherApp() {
       .catch((error) => console.log(error));
   }, []);
 
+  //this is for when the search button is used, same as the on mount function above
   function handleWeatherSearch() {
     fetch(api)
       .then((res) => {
@@ -187,6 +190,7 @@ function WeatherApp() {
   return (
     <div className="weatherapp-conatiner">
       <div className="main-data">
+        {/* today data */}
         <h1 className="today">Today</h1>
         <h2 className="main-text">{cityText}</h2>
         <h2 className="main-text">{temp}°</h2>
@@ -202,6 +206,7 @@ function WeatherApp() {
           Search
         </button>
       </div>
+      {/* 5 day forecast grid */}
       <div className="day-grid">
         <div className="weather-grid">
           <h3>{day2}</h3>
