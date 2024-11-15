@@ -113,6 +113,8 @@ function WeatherApp() {
           setCondition6(data.list[39].weather[0].main);
           setDescription6(data.list[39].weather[0].description);
           setHumidity6(data.list[39].main.humidity);
+
+          setCity('')
         }
         console.log(data);
       })
@@ -139,6 +141,43 @@ function WeatherApp() {
           setHumidity(data.list[0].main.humidity);
 
           // 5 day data
+
+          setTemp2(
+            Math.floor((data.list[8].main.temp - 273.15) * (9 / 5) + 32),
+          );
+          setCondition2(data.list[8].weather[0].main);
+          setDescription2(data.list[8].weather[0].description);
+          setHumidity2(data.list[8].main.humidity);
+
+          setTemp3(
+            Math.floor((data.list[16].main.temp - 273.15) * (9 / 5) + 32),
+          );
+          setCondition3(data.list[16].weather[0].main);
+          setDescription3(data.list[16].weather[0].description);
+          setHumidity3(data.list[16].main.humidity);
+
+          setTemp4(
+            Math.floor((data.list[24].main.temp - 273.15) * (9 / 5) + 32),
+          );
+          setCondition4(data.list[24].weather[0].main);
+          setDescription4(data.list[24].weather[0].description);
+          setHumidity4(data.list[24].main.humidity);
+
+          setTemp5(
+            Math.floor((data.list[32].main.temp - 273.15) * (9 / 5) + 32),
+          );
+          setCondition5(data.list[32].weather[0].main);
+          setDescription5(data.list[32].weather[0].description);
+          setHumidity5(data.list[32].main.humidity);
+
+          setTemp6(
+            Math.floor((data.list[39].main.temp - 273.15) * (9 / 5) + 32),
+          );
+          setCondition6(data.list[39].weather[0].main);
+          setDescription6(data.list[39].weather[0].description);
+          setHumidity6(data.list[39].main.humidity);
+          
+          setCity('')
         }
         console.log(data);
       })
