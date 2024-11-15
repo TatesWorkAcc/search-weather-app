@@ -187,14 +187,14 @@ function WeatherApp() {
   return (
     <div className="weatherapp-conatiner">
       <div className="main-data">
-        <h1 className="main-text">Today</h1>
-        <h1 className="main-text">{cityText}</h1>
-        <h1 className="main-text">{temp}°</h1>
-        <h1 className="main-text">{condition}</h1>
-        <h1 className="main-text">{description}</h1>
-        <h1 className="main-text">{humidity} Humidity</h1>
-        <input value={city} onChange={(e) => setCity(e.target.value)}></input>
-        <button onClick={handleWeatherSearch}>Search</button>
+        <h1 className="today">Today</h1>
+        <h2 className="main-text">{cityText}</h2>
+        <h2 className="main-text">{temp}°</h2>
+        <h2 className="main-text">{condition}</h2>
+        <h2 className="main-text">{description}</h2>
+        <h2 className="main-text">{humidity} Humidity</h2>
+        <input className="main-text" value={city} onChange={(e) => setCity(e.target.value)}></input>
+        <button className="search-button" onClick={handleWeatherSearch}>Search</button>
       </div>
       <div className="day-grid">
         <div className="weather-grid">
