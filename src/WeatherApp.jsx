@@ -193,8 +193,14 @@ function WeatherApp() {
         <h2 className="main-text">{condition}</h2>
         <h2 className="main-text">{description}</h2>
         <h2 className="main-text">{humidity} Humidity</h2>
-        <input className="main-text" value={city} onChange={(e) => setCity(e.target.value)}></input>
-        <button className="search-button" onClick={handleWeatherSearch}>Search</button>
+        <input
+          className="main-text"
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+        ></input>
+        <button className="search-button" onClick={handleWeatherSearch}>
+          Search
+        </button>
       </div>
       <div className="day-grid">
         <div className="weather-grid">
