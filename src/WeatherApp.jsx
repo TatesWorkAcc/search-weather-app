@@ -56,7 +56,8 @@ function WeatherApp() {
   d6.setDate(d6.getDate() + 5);
   const day6 = d6.toLocaleString("en-US", { weekday: "long" });
 
-  const apiKey = "cdd4092d218d6552c31cd36150f70f4f";
+  //api goes here
+  const apiKey = "put api here";
   const api = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
 
   //runs on mount to give default data of New York
